@@ -5,7 +5,7 @@ module "resource_group" {
 }
 module "resource_group" {
   source                  = "../Child_Module/azurerm_resource_group"
-  resource_group_name     = "Todoapp54"
+  resource_group_name     = "Todoapp56"
   resource_group_location = "Central India"
 }
 module "resource_group" {
