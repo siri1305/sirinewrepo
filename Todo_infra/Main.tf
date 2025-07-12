@@ -3,6 +3,11 @@ module "resource_group" {
   resource_group_name     = "TodoappRG"
   resource_group_location = "West Europe"
 }
+module "resource_group" {
+  source                  = "../Child_Module/azurerm_resource_group"
+  resource_group_name     = "Todoapp54"
+  resource_group_location = "Central India"
+}
 module "virtual_network" {
   source                              = "../Child_Module/azurerm_vitrual_network"
   virtual_network_name                = "TodoappVnet"
