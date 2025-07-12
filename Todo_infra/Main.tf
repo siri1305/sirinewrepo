@@ -10,7 +10,7 @@ module "resource_group" {
 }
 module "resource_group" {
   source                  = "../Child_Module/azurerm_resource_group"
-  resource_group_name     = "Todoapp5"
+  resource_group_name     = "RG55"
   resource_group_location = "Central India"
 }
 module "virtual_network" {
