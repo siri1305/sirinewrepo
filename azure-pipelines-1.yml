@@ -17,3 +17,8 @@ steps:
     backendAzureRmStorageAccountName: 'deekshasa'
     backendAzureRmContainerName: 'deeksha-con'
     backendAzureRmKey: 'siri.tfstate'
+- task: TerraformTask@5
+  inputs:
+    provider: 'azurerm'
+    command: 'plan'
+    environmentServiceNameAzureRM: 'meraprinciple'
