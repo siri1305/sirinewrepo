@@ -1,8 +1,6 @@
 trigger: none
 
-
 pool: sirinewpool
-
 
 steps:
 - task: TerraformInstaller@1
@@ -22,4 +20,10 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'plan'
+    environmentServiceNameAzureRM: 'meraprinciple'
+
+- task: TerraformTask@5
+  inputs:
+    provider: 'azurerm'
+    command: 'apply'
     environmentServiceNameAzureRM: 'meraprinciple'
