@@ -1,0 +1,18 @@
+trigger: none
+
+pool: sirinewpool
+
+steps:
+- task: TerraformInstaller@1
+  inputs:
+    terraformVersion: 'latest'
+
+- task: TerraformTask@5
+  displayName: terraform init
+  inputs:
+     provider: 'azurerm'
+     command: 'init'
+     backendServiceArm: 'meraprinciple'
+     backendAzureRmStorageAccountName: 'sgtsaurabh'
+     backendAzureRmContainerName: 'newcont'
+     backendAzureRmKey: '.tfstate'     
