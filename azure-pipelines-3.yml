@@ -15,4 +15,23 @@ steps:
      backendServiceArm: 'meraprinciple'
      backendAzureRmStorageAccountName: 'sgtsaurabh'
      backendAzureRmContainerName: 'newcont'
-     backendAzureRmKey: '.tfstate'     
+     backendAzureRmKey: '.tfstate'
+
+- task: TerraformTask@5
+  displayName: terraform validate
+  inputs:
+    provider: 'azurerm'
+    command: 'validate'
+
+- task: TerraformTask@5
+  displayName: terraform plan
+  inputs:
+    provider: 'azurerm'
+    command: 'plan'
+    environmentServiceNameAzureRM: 'meraprinciple'
+- task: TerraformTask@5
+  displayName: terraform apply
+  inputs:
+    provider: 'azurerm'
+    command: 'apply'
+    environmentServiceNameAzureRM: 'meraprinciple'
